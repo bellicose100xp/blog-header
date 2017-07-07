@@ -1,0 +1,215 @@
+<!--DEV ONLY common elements need at the top to notate HiDpi scaling and charset-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #hs-cms-parent {
+        max-width: 1200px;
+        min-width: 320px;
+        margin: 0 auto;
+        /*background-color: rgba(255, 0, 0, 0.3);*/
+    }
+</style>
+
+<!--COMMON ELEMENT-->
+<!--import "Source Sans Pro" font-->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+
+<!--DEV ONLY element -->
+<div id="hs-cms-parent">
+
+    <!--title block-->
+    <div>
+        <style>
+            .hs-title-container {
+                font-family: sans-serif;
+                display: flex;
+                flex-flow: row wrap;
+                margin-bottom: 10px;
+            }
+
+            .hs-title-heading {
+                width: 25%;
+                /*background-color: green;*/
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                box-sizing: border-box;
+                border-right: 2px solid black;
+            }
+
+            .hs-title-heading-text {
+                font-size: 24px;
+                /*background-color: orange;*/
+                text-align: center;
+            }
+
+            .hs-title-description {
+                font-family: "Source Sans Pro", sans-serif;
+                width: 50%;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+
+            .hs-title-subheading {
+                width: 25%;
+                background-color: black;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+            }
+
+            .hs-title-subheading-text {
+                font-size: 30px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+            }
+
+            .hs-title-hr-line {
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                border-style: solid;
+                border-width: 3.5px;
+            }
+
+            @media all and (max-width: 735px) {
+                .hs-title-container {
+                    flex-flow: column nowrap;
+                }
+
+                .hs-title-subheading {
+                    box-sizing: border-box;
+                    padding: 5px;
+                    width: 100%;
+                    order: -1
+                }
+
+                .hs-title-heading {
+                    box-sizing: border-box;
+                    padding: 5px 5px 0px 5px;
+                    width: 100%;
+                    border-right: unset;
+                }
+
+                .hs-title-description {
+                    width: 100%;
+                }
+
+                .hs-title-hr-line {
+                    border-width: 1.5px;
+                }
+            }
+        </style>
+
+        <div class="hs-title-container">
+            <div class="hs-title-heading">
+                <div class="hs-title-heading-text">ACCENT PIECES</div>
+            </div>
+            <div class="hs-title-description">A great outfit is the result of grand design. When you plan with Base, Tonal, & Pop of Color in mind, your ensemble
+                will always leave a mark.</div>
+            <div class="hs-title-subheading">
+                <div class="hs-title-subheading-text"> STYLE</div>
+            </div>
+            <div class="hs-title-hr-line"> </div>
+        </div>
+    </div>
+
+    <!--block 1-->
+    <div>
+        <style>
+            .b1-container {
+                font-family: sans-serif;
+                width: 100%;
+                display: flex;
+                /*background-color: rgba(255, 0, 0, 0.3)*/
+            }
+
+            .b1-image-container {
+                width: 50%;
+            }
+
+            .b1-image-container img {
+                width: 100%;
+            }
+
+            .b1-container article {
+                width: 50%;
+                box-sizing: border-box;
+                padding: 0 20px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+            }
+
+            .b1-container header {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .b1-container article div {
+                font-size: 24px;
+                font-weight: 400;
+                box-sizing: border-box;
+                padding-bottom: 20px;
+            }
+
+            .b1-container summary {
+                font-family: "Source Sans Pro", sans-serif;
+                font-size: 16px;
+            }
+
+            @media all and (max-width: 1200px) {
+                .b1-container header {
+                    font-size: calc(26px + (30 - 26) * (100vw - 735px) / (1200 - 735));
+                }
+                .b1-container article div {
+                    font-size: calc(20px + (24 - 20) * (100vw - 735px) / (1200 - 735));
+                }
+                .b1-container article div {
+                    padding-bottom: calc(5px + (20 - 5) * (100vw - 735px) / (1200 - 735));
+                }
+            }
+
+            @media all and (max-width: 735px) {
+                .b1-container {
+                    flex-flow: column nowrap;
+                }
+                .b1-image-container {
+                    width: 100%
+                }
+                .b1-image-container img {
+                    width: 100%;
+                }
+                .b1-container article {
+                    width: 100%;
+                    padding: 15px 5px;
+                }
+                .b1-container article div {
+                    padding-bottom: 15px;
+                }
+            }
+        </style>
+        <div class="b1-container">
+            <div class="b1-image-container">
+                <img src="assets/accent-piece-header-image.jpg" />
+            </div>
+            <article>
+                <header> THE SEXIEST ACCENT,</header>
+                <div>IS AN ACCENT PIECE</div>
+                <summary>Trying to piece together a last-minute outfit never works, take time to think out your outfits in advance.
+                    You will always be well coordinated, looking more harmonious and elegant. Follow this guide on choosing
+                    the proper accent pieces. There are several color schemes, so there is something for everyone and every
+                    setting. The following color schemes are recommending for choosing the colors for an outfit.
+                </summary>
+            </article>
+        </div>
+    </div>
+</div>
